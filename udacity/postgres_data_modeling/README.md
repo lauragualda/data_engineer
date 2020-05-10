@@ -6,7 +6,37 @@ For that, we gathered data from user logs and songs metadata from JSON files and
 
 The schema is based on the fact table `songplays` contanining high level information of each song listened by each user. From this table, analysts can understand aggregated user behavior, such as: the number of songs a user listens on a day, how many different songs an user listens on a time range. We also defined 4 dimension tables: `users`, `songs`, `artists`and `time`. 
 
-When joining with these tables, analysts will be able to easily conduct analyses to understand the profile of users that listen to given songs or artists,look for clusters of songs and artists listened by given profiles of users and estimate which time of the day or the week users are more likely to be listening to music.
+### Structure of this repository
+
+This repository contains the following files: 
+
+1. Three python scripts used to maintain the Sparkify database:
+  * `sql_queries.py` - Collection Postgres SQL queries to drop, create and insert records into databases
+  * `create_tables.py` - Sequential commands to create database and create tables. If the database or tables already exist, they are dropped and recreated.
+  * `etl.py` - ETL processes that transforms user logs and songs metadata from JSON files into the Sparkify database 
+2. One jupyter notebook used for research and development of the ETL process: `etl.ipynb`
+3. One jupyter notebook used to test queries during research and development phase: `test.ipynb`
+4. A folder named `data`, containing user logs and song metadata in JSON files
+
+### How to run the scripts
+
+Download or clone this repository and make sure you run the following commands from inside your local directory where you saved it.
+
+1. Create the Sparkify database with its 5 tables:
+
+```python
+python create_tables.py
+```
+
+2. Extract data and process data from the .json files and load them into Sparkify tables:
+
+```python
+python etl.py
+```
+
+### Analytics use cases
+
+When joining the tables available on Sparkify, analysts will be able to easily explore the profile of users that listen to given songs or artists, look for clusters of songs and artists listened by given profiles of users and estimate which time of the day or the week users are more likely to be listening to music.
 
 For example, an analysis on which day of the week users listen to more songs can start with the following query:
 
