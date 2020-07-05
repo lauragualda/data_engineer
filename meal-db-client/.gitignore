@@ -1,0 +1,15 @@
+# Don't track content of these folders
+.idea/
+.ipynb_checkpoints
+__pycache__
+.vscode
+.idea
+**egg-info
+venv
+.pytest_cache
+
+# Don't track content of these files
+**.pyc
+**.logs
+**.csv
+
