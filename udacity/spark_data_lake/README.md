@@ -12,8 +12,8 @@ This repository contains the following files:
 
 1. a config file `dl.cfg` where the user should insert their AWS credentials
 2. A python script `etl.py` containing the ETL process that transforms user logs and songs from JSON files into the Sparkify data  warehouse 
-3. A folder named `data`, containing a sample of user logs and song metadata in JSON files
-4. A folder named `spark-warehouse`, containing a sample of the data warehouse parquet files
+3. A folder named `data`, containing a sample of user logs and song metadata in JSON files (local only)
+4. A folder named `spark-warehouse`, containing a sample of the data warehouse parquet files (local only)
 
 ### How to run the scripts
 
@@ -21,11 +21,7 @@ Download or clone this repository and make sure you run the following commands f
 
 1. Insert your AWS credentials into `dl.cfg`
 
-2. Create the Sparkify data warehouse with its 5 tables:
-
-```python
-python etl.py
-```
+2. Create the Sparkify data warehouse with its 5 tables by running `python etl.py`
 
 ### Analytics use cases
 
