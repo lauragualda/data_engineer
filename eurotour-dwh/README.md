@@ -40,8 +40,9 @@ Note: On the website, the datasets are available in `csv`, but to meet the proje
 
 The DWH consists of 6 tables in normal form such that it avoids redundancy and favours data integrity.
 
+![data model](docs/data_model.png)
 
-You can check the dictionary of the variables in each table here: 
+You can check the dictionary of the variables in each table here: [data_dictionary.pdf](docs/data_dictionary.pdf)
 
 ### DWH technology
 
